@@ -17,6 +17,11 @@ pipeline {
                 sh 'terraform plan'
             }
         }
+        stage('Print Env Value') {
+            steps {
+                echo "Environment is: ${params.environment}"
+            }
+        }
         
     }
 }
